@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Buttons</title>
+		<link rel="icon" href="images/button.webp">
+	</head>
+	<body>
+		<button style="font-size: 25px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">reset</button>
+		<button onclick="counter()" style="font-size: 25px; background-color: aquamarine; border-radius: 20px;">counter</button>
+		<p id="num">0</p>
+		<script>
+			var x = 0
+			function counter(){
+				x = x + 1
+				 document.getElementById("num").innerHTML = x;
+			}
+			function reset(){
+				x = 0
+				document.getElementById("num").innerHTML = x;
+			}
+		</script>
+	</body>
+</html>

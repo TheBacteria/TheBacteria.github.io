@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="images/calculator.png">
+</head>
+<body style="background-color: bisque;">
+	<p id="num" style="font-size: 50px;">0</p>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add7()">7</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add8()">8</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add9()">9</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">/</button>
+    <br>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add4()">4</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add5()">5</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add6()">6</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">*</button>
+    <br>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add1()">1</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add2()">2</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add3()">3</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">-</button>
+    <br>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add0()">0</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">+</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">=</button>
+    <button style="font-size: 30px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">CLEAR</button>
+    <br>
+	<button onclick="counter()" style="font-size: 25px; background-color: aquamarine; border-radius: 20px;">counter</button>
+	<script>
+		var x = 0
+        var y = 0
+        var op = '+'
+        function add(){
+            op = '+'
+            y = x
+            x = 0
+            document.getElementById("num").innerHTML = x;
+        }
+        function minus(){
+            op = '-'
+            y = x
+            x = 0
+            document.getElementById("num").innerHTML = x;
+        }
+        function multiply(){
+            op = '*'
+            y = x
+            x = 0
+            document.getElementById("num").innerHTML = x;
+        }
+        function devide(){
+            op = '/'
+            y = x
+            x = 0
+            document.getElementById("num").innerHTML = x;
+        }
+        function add0(){
+            x = x * 10
+            document.getElementById("num").innerHTML = x;
+        }
+        function add1(){
+            x = x * 10 + 1
+            document.getElementById("num").innerHTML = x;
+        }
+        function add2(){
+            x = x * 10 + 2
+            document.getElementById("num").innerHTML = x;
+        }
+        function add3(){
+            x = x * 10 + 3
+            document.getElementById("num").innerHTML = x;
+        }
+        function add4(){
+            x = x * 10 + 4
+            document.getElementById("num").innerHTML = x;
+        }
+        function add5(){
+            x = x * 10 + 5
+            document.getElementById("num").innerHTML = x;
+        }
+        function add6(){
+            x = x * 10 + 6
+            document.getElementById("num").innerHTML = x;
+        }
+        function add7(){
+            x = x * 10 + 7
+            document.getElementById("num").innerHTML = x;
+        }
+        function add8(){
+            x = x * 10 + 8
+            document.getElementById("num").innerHTML = x;
+        }
+        function add9(){
+            x = x * 10 + 9
+            document.getElementById("num").innerHTML = x;
+        }
+		function counter(){
+			x = x + 1
+			 document.getElementById("num").innerHTML = x;
+		}
+		function reset(){
+			x = 0
+			document.getElementById("num").innerHTML = x;
+		}
+	</script>
+</body>
+</html>

@@ -11,28 +11,49 @@
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add7()">7</button>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add8()">8</button>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add9()">9</button>
-    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">/</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="devide()">/</button>
     <br>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add4()">4</button>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add5()">5</button>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add6()">6</button>
-    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">*</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="multiply()">*</button>
     <br>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add1()">1</button>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add2()">2</button>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add3()">3</button>
-    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">-</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="minus()">-</button>
     <br>
     <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add0()">0</button>
-    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">+</button>
-    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">=</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="add()">+</button>
+    <button style="font-size: 50px; background-color: aquamarine; border-radius: 20px;" onclick="equals()">=</button>
     <button style="font-size: 30px; background-color: aquamarine; border-radius: 20px;" onclick="reset()">CLEAR</button>
     <br>
-	<button onclick="counter()" style="font-size: 25px; background-color: aquamarine; border-radius: 20px;">counter</button>
 	<script>
 		var x = 0
         var y = 0
         var op = '+'
+        function equals(){
+            if (op == '+')
+            {
+                x = x + y
+                document.getElementById("num").innerHTML = x;
+            }
+            if (op == '-')
+            {
+                x = y - x
+                document.getElementById("num").innerHTML = x;
+            }
+            if (op == '*')
+            {
+                x = x * y
+                document.getElementById("num").innerHTML = x;
+            }
+            if (op == '/')
+            {
+                x = y / x
+                document.getElementById("num").innerHTML = x;
+            }
+        }
         function add(){
             op = '+'
             y = x
@@ -97,10 +118,6 @@
             x = x * 10 + 9
             document.getElementById("num").innerHTML = x;
         }
-		function counter(){
-			x = x + 1
-			 document.getElementById("num").innerHTML = x;
-		}
 		function reset(){
 			x = 0
 			document.getElementById("num").innerHTML = x;
